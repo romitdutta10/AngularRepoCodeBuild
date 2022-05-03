@@ -10,7 +10,11 @@ phases:
       - npm install
   build:
     commands:
+      - echo Build error Simulation!
+      - exit 1
       - ng build --prod
+    finally:
+      - echo This is finally block execution!
 artifacts:
   base-directory: dist/my-angular-project
   files:
